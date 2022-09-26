@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "author" content="Kalixsmurf">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Results are below:</h1><hr> 
+    <p>Username:  {{related_information.username}}</p>
+    <p>Nickname:  {{related_information.nickname}}</p>
+    <p>Biography:  {{related_information.biography}}</p>
+    <p>Organization:  {{related_information.organization}}</p>
+    <p>Location:  {{related_information.location}}</p>
+    <p>Profile website link:  {{related_information.profile_website}}</p>
+    <p>Twitter account link:  {{related_information.twitter_account_link}}</p>
+    <p>Popular repositories</p>
+    <ol>
+        {% for repo in related_information.popular_repositories %}
+            <li>{{repo}}</li>
+        {% endfor %}
+    </ol>
+    <a href="{{related_information.all_repositories}}">All repositories link</p>
+</body>
+</html>
